@@ -21,6 +21,7 @@ public class PlaySceneScript : MonoBehaviour
     public void ClickPause()
     {
         pauseMunu.SetActive(true);
+        Time.timeScale = 0f;
         pauseIcon.SetActive(false);
     }
 
@@ -32,6 +33,7 @@ public class PlaySceneScript : MonoBehaviour
     public void ClickCont()
     {
         pauseMunu.SetActive(false);
+        Time.timeScale = 1f;
         pauseIcon.SetActive(true);
     }
 
@@ -54,5 +56,12 @@ public class PlaySceneScript : MonoBehaviour
         settings.SetActive(false);
         pauseIcon.SetActive(false);
         cont.SetActive(false);
+    }
+
+    public void ReastartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        pauseMunu.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

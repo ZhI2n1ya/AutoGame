@@ -40,4 +40,9 @@ public class LocationSelection : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
+
+    public void ClickGarage()
+    {
+        SceneManager.LoadScene(4);
+    }
 }
