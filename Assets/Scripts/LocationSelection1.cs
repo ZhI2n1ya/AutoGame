@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class LocationSelection1 : MonoBehaviour
 {
@@ -7,6 +10,9 @@ public class LocationSelection1 : MonoBehaviour
 	public GameObject[] locationNext;
 	public GameObject[] locarionPrivious;
 	public GameObject[] locarionDescription;
+
+	public Sprite image;
+	public Sprite image1;
 	
 	public int selectedLocation = 0;
 	public int selectedLocationNext = 0;
@@ -66,5 +72,13 @@ public class LocationSelection1 : MonoBehaviour
 			selectedLocationDescription += locarionDescription.Length;
 		}
 		locarionDescription[selectedLocationDescription].SetActive(true);
+	}
+
+	public void OnButtonClick () {
+    	GetComponent<Image>().sprite = image;
+	}
+
+	public void OnButtonClick1 () {
+		GetComponent<Image>().sprite = image1;
 	}
 }
